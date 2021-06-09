@@ -23,7 +23,6 @@ var numeric ='0123456789'
 var specialCharacters ='@#$_';
 var str="";
 var len=0;
-var indx;
 len =prompt("How many characters would you like to contain?");
 var choices=["lowercase", "uppercase", "numeric", "specialCharacters"];
 
@@ -41,31 +40,40 @@ for( var x in choices){
   if(!toHave){
     continue; 
   }
-  console.log(str);
-  console.log(lowercase);
-  console.log(choice);
+  // console.log(str);
+  // console.log(lowercase);
+  // console.log(choice);
   if(choice=="lowercase"){
     str= str.concat(lowercase);
-    console.log(str);
+    // console.log(str);
   getRandomChar(lowercase);
   }
   else if(choice=="uppercase"){
     str= str.concat(uppercase);
-    console.log(str);
+   // console.log(str);
     getRandomChar(uppercase);
   }
   else if(choice=="numeric"){
     str= str.concat(numeric);
-    console.log(str);
+   // console.log(str);
     getRandomChar(numeric);
   }
   else if(choice=="specialCharacters"){
     str= str.concat(specialCharacters);
-    console.log(str);
+   // console.log(str);
     getRandomChar(specialCharacters);
   }
 
 }
+
+
+function getRandomChar(choice){
+
+  var indx = Math.floor(Math.random() * choice.length) +1;
+ generatePassword = generatePassword.concat(choice.charAt(indx));
+ 
+}
+
 
 var remaining = len - generatePassword.length;
 for (var x=0 ;x < remaining;x++){
