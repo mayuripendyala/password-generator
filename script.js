@@ -33,14 +33,6 @@ for(;len < 8 || len > 128 ; ){
   
 }
 
-// var choice;
-
-// for(;chooseChars=="";){
-// chooseChars= prompt("Enter you choice lowercase, uppercase, numeric, and/or special characters");
-//  choice =chooseChars.split(",");
-
-// }
-// console.log(choice);
 
 for( var x in choices){
   var choice =choices[x];
@@ -74,41 +66,7 @@ for( var x in choices){
   }
 
 }
-// if(uppercaseChoise=="LOWERCASE"){
-//       generatePassword = getRandomIndex(specialChar);
 
-// }else if(uppercaseChoise =="UPPERCASE"|| uppercaseChoise.match(/UP/g)){
-//   // str=str.concat(upperCase);
-//   // indx =Math.floor(Math.random() * upperCase.length) +1;
-//   // generatePassword = generatePassword.concat(upperCase.charAt(indx));
-//   generatePassword = getRandomIndex(specialChar);
-
-// }
-// else if(uppercaseChoise =="NUMERIC"|| uppercaseChoise.match(/NUM/g) ){
-//   // str=str.concat(numbers);
-//   //indx =Math.floor(Math.random() * numbers.length) +1;
-//  // generatePassword = generatePassword.concat(numbers.charAt(indx));
-//  generatePassword = getRandomIndex(specialChar);
-
-// }
-// else if(uppercaseChoise =="SPECIAL"|| uppercaseChoise.match(/SPEC/g)|| uppercaseChoise.match(/CHA/g)){
-//   // str=str.concat(specialChar);
-//   //indx =getRandomIndex(specialChar);
-//   generatePassword = getRandomIndex(specialChar);
-// }
-
-function getRandomChar(choice){
-
-  indx = Math.floor(Math.random() * choice.length) +1;
- generatePassword = generatePassword.concat(choice.charAt(indx));
- 
-}
-
-// for(var i=0;i< len ;i++) {
-//   var indx =Math.floor(Math.random() * str.length) +1;
-//     generatePassword = generatePassword.concat(str.charAt(indx));
-
-// }
 var remaining = len - generatePassword.length;
 for (var x=0 ;x < remaining;x++){
   getRandomChar(str);
