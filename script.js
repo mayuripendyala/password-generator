@@ -72,18 +72,20 @@ function getRandomChar(choice){
   var indx = Math.floor(Math.random() * choice.length) +1;
  generatePassword = generatePassword.concat(choice.charAt(indx));
  
+ console.log(generatePassword.length);
+ 
 }
 
+console.log(generatePassword.length);//5
+// console.log(len);//8
 
 var remaining = len - generatePassword.length;
-for (var x=0 ;x < remaining;x++){
+for (var x=0 ;x <= remaining;x++){
   getRandomChar(str);
 }
-// console.log(str);
-// console.log(len);//8
-// console.log(remaining);//6
-// console.log(generatePassword.length);//5
-// console.log(generatePassword);
+
+
+console.log(generatePassword.length);
 return generatePassword;
 
 }
